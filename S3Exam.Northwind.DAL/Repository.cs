@@ -13,8 +13,8 @@ namespace S3Exam.Northwind.DAL
     {
         private NorthwindModel model = new NorthwindModel();
 
-        public List<Employee> GetAllEmployees()
-            => model.Employees.ToList();
+        public List<Order> GetAllOrders()
+            => model.Orders.ToList();
 
         public void Update(Employee employee)
         {

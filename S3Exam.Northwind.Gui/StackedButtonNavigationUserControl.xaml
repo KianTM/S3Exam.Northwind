@@ -14,19 +14,24 @@
                           Checked="HrButton_Checked" />
             <ToggleButton x:Name="ordersButton"
                           Content="Ordrer"
-                          Height="40" />
+                          Height="40"
+                          Checked="OrdersButton_Checked" />
             <ToggleButton x:Name="productsButton"
                           Content="Produkter"
-                          Height="40" />
+                          Height="40"
+                          Checked="ProductsButton_Checked" />
             <ToggleButton x:Name="earningsButton"
                           Content="Regnskab"
-                          Height="40" />
+                          Height="40"
+                          Checked="EarningsButton_Checked" />
             <ToggleButton x:Name="customerButton"
                           Content="Kunder"
-                          Height="40" />
+                          Height="40"
+                          Checked="CustomerButton_Checked" />
             <ToggleButton x:Name="providerButton"
                           Content="Leverandører"
-                          Height="40" />
+                          Height="40"
+                          Checked="ProviderButton_Checked" />
         </StackPanel>
     </Grid>
 </UserControl>

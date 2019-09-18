@@ -28,13 +28,15 @@ namespace S3Exam.Northwind.Gui
         {
             InitializeComponent();
             this.mainWindow = mainWindow;
-            buttons = new List<ToggleButton>();
-            buttons.Add(hrButton);
-            buttons.Add(ordersButton);
-            buttons.Add(productsButton);
-            buttons.Add(earningsButton);
-            buttons.Add(customerButton);
-            buttons.Add(providerButton);
+            buttons = new List<ToggleButton>
+            {
+                hrButton,
+                ordersButton,
+                productsButton,
+                earningsButton,
+                customerButton,
+                providerButton
+            };
         }
 
         private void HrButton_Checked(object sender, RoutedEventArgs e)
@@ -46,7 +48,62 @@ namespace S3Exam.Northwind.Gui
                     button.IsChecked = false;
                 }
             }
-            mainWindow.DetailsUserControl.Content = new HRUserControl();
+        }
+
+        private void OrdersButton_Checked(object sender, RoutedEventArgs e)
+        {
+            foreach (var button in buttons)
+            {
+                if (button.IsChecked == true && button.Name != "ordersButton")
+                {
+                    button.IsChecked = false;
+                }
+            }
+            mainWindow.DetailsUserControl.Content = new OrdersUserControl();
+        }
+
+        private void ProductsButton_Checked(object sender, RoutedEventArgs e)
+        {
+            foreach (var button in buttons)
+            {
+                if (button.IsChecked == true && button.Name != "productsButton")
+                {
+                    button.IsChecked = false;
+                }
+            }
+        }
+
+        private void EarningsButton_Checked(object sender, RoutedEventArgs e)
+        {
+            foreach (var button in buttons)
+            {
+                if (button.IsChecked == true && button.Name != "earningsButton")
+                {
+                    button.IsChecked = false;
+                }
+            }
+        }
+
+        private void CustomerButton_Checked(object sender, RoutedEventArgs e)
+        {
+            foreach (var button in buttons)
+            {
+                if (button.IsChecked == true && button.Name != "customerButton")
+                {
+                    button.IsChecked = false;
+                }
+            }
+        }
+
+        private void ProviderButton_Checked(object sender, RoutedEventArgs e)
+        {
+            foreach (var button in buttons)
+            {
+                if (button.IsChecked == true && button.Name != "providerButton")
+                {
+                    button.IsChecked = false;
+                }
+            }
         }
     }
 }
