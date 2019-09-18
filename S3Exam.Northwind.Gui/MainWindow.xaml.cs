@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace S3Exam.Northwind.Gui
 {
     /// <summary>
@@ -23,6 +22,16 @@ namespace S3Exam.Northwind.Gui
         public MainWindow()
         {
             InitializeComponent();
+            masterUserControl.Content = new StackedButtonNavigationUserControl(this);
+        }
+        public UserControl DetailsUserControl
+        {
+            get => detailsUserControl;
+            set
+            {
+                if (value != null)
+                    detailsUserControl = value;
+            }
         }
     }
 }
